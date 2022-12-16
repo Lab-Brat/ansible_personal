@@ -1,0 +1,32 @@
+---
+- name: Include AUR task.
+  include_tasks:
+    file: aur.yaml
+  args:
+    apply:
+      tags: aur
+  tags: always
+
+- name: Include Docker task.
+  include_tasks:
+    file: docker.yaml
+  args:
+    apply:
+      tags: docker
+  tags: always
+
+- name: Include Pacman task.
+  include_tasks:
+    file: pacman.yaml
+  args:
+    apply:
+      tags: pacman
+  tags: always
+
+- name: Include zshrc task.
+  include_tasks:
+    file: zshrc.yaml
+  args:
+    apply:
+      tags: zsh
+  tags: always
