@@ -1,20 +1,23 @@
 ---
-- name: Install Docker and Docker Compose.
-  pacman:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - docker
-    - docker-compose
+- name: Docker block.
+  tags: docker
+  block:
+  - name: Install Docker and Docker Compose.
+    pacman:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - docker
+      - docker-compose
 
-- name: Enable Docker service.
-  service:
-    name: docker
-    state: started
-    enabled: true
+  - name: Enable Docker service.
+    service:
+      name: docker
+      state: started
+      enabled: true
 
-- name: Add user to Docker group.
-  user:
-    name: "{{ user }}"
-    groups: docker
-    append: yes
+  - name: Add user to Docker group.
+    user:
+      name: "{{ user }}"
+      groups: docker
+      append: yes
