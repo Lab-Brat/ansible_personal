@@ -1,6 +1,5 @@
 ---
 - name: Docker block.
-  tags: docker
   block:
   - name: Install Docker and Docker Compose.
     pacman:

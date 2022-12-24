@@ -1,6 +1,5 @@
 ---
 - name: Pacman block.
-  tags: pacman
   block:
   - name: Get kernel version.
     shell: echo "linux$(uname -r | cut -c -4 | sed 's/\.//')-virtualbox-host-modules"

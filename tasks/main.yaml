@@ -1,20 +1,16 @@
 ---
-- name: Include AUR task.
-  include_tasks:
-    file: aur.yaml
+- name: Import AUR task.
+  import_tasks: aur.yaml
   tags: aur
 
-- name: Include Docker task.
-  include_tasks:
-    file: docker.yaml
+- name: Import Docker task.
+  import_tasks: docker.yaml
   tags: docker
 
-- name: Include Pacman task.
-  include_tasks:
-    file: pacman.yaml
+- name: Import Pacman task.
+  import_tasks: pacman.yaml
   tags: pacman
 
-- name: Include zshrc task.
-  include_tasks:
-    file: zshrc.yaml
+- name: Import zshrc task.
+  import_tasks: zshrc.yaml
   tags: zsh

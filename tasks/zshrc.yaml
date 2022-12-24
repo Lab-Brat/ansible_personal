@@ -1,6 +1,5 @@
 ---
 - name: zshrc block.
-  tags: zshrc
   block:
   - name: Ensure that custom alias information line is present.
     lineinfile:

@@ -1,6 +1,5 @@
 ---
 - name: AUR block.
-  tags: aur
   block:
   - name: Gather the package facts
     package_facts:
