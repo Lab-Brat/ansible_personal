@@ -1,4 +1,4 @@
-### Personal Setup
+### Ansible Personal
 
 This directory contains Ansible playbooks for my 
 personal configuration of Manjaro Linux Distribution.  
