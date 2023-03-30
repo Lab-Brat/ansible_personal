@@ -47,11 +47,3 @@
       name: "{{ user }}"
       groups: docker
       append: yes
-
-  - name: Install Ansible.
-    pip:
-      name: "{{ item }}"
-      extra_args: --user
-    with_items:
-      - ansible 
-    become_user: "{{ user }}"
