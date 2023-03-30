@@ -27,11 +27,25 @@
       - "{{ kernel_v.stdout }}"
       - virtualbox
       - vagrant
+      - docker
+      - docker-compose
 
   - name: Add user to vboxusers group.
     user:
       name: "{{ user }}"
       groups: vboxusers
+      append: yes
+
+  - name: Enable Docker service.
+    service:
+      name: docker
+      state: started
+      enabled: true
+
+  - name: Add user to Docker group.
+    user:
+      name: "{{ user }}"
+      groups: docker
       append: yes
 
   - name: Install Ansible.
