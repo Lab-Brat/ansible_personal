@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  become: yes
+  
+  tasks:
+    - name: Include AUR tasks.
+      include_tasks: ./tasks/aur.yaml
+      args:
+        apply:
+          tags: [install, aur]
+      tags:
+        - [install, aur]
+
+    - name: Include Pacman tasks.
+      include_tasks: ./tasks/pacman.yaml
+      args:
+        apply:
+          tags: [install, pacman]
+      tags:
+        - [install, pacman]
+
+    - name: Include zshrc tasks.
+      include_tasks: ./tasks/zshrc.yaml
+      args:
+        apply:
+          tags: [install, zshrc]
+      tags:
+        - [install, zshrc]
