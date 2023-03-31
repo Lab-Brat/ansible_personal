@@ -19,14 +19,6 @@
       tags:
         - [install, pacman]
 
-    - name: Include zshrc tasks.
-      include_tasks: ./tasks/zshrc.yaml
-      args:
-        apply:
-          tags: [install, zshrc]
-      tags:
-        - [install, zshrc]
-
     - name: Include backup task.
       include_tasks: ./tasks/backup.yaml
       args:
