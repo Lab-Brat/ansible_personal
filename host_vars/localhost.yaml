@@ -1,3 +1,4 @@
 ---
 user: "{{ lookup('env','USER') }}"
+home: "/home/{{ user }}"
 zshrc: "/home/{{ user }}/.zshrc"

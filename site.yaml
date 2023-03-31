@@ -26,3 +26,11 @@
           tags: [install, zshrc]
       tags:
         - [install, zshrc]
+
+    - name: Include backup task.
+      include_tasks: ./tasks/backup.yaml
+      args:
+        apply:
+          tags: [backup]
+      tags:
+        - [backup]

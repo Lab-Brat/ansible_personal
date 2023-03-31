@@ -1,0 +1,17 @@
+---
+- name: Backup directories and configs.
+  archive:
+    path:
+      - "{{ home }}/cloudlinux/"
+      - "{{ home }}/github/"
+      - "{{ home }}/gitlab/"
+      - "{{ home }}/.p10k.zsh"
+      - "{{ home }}/.ssh/"
+      - "{{ home }}/.vimrc"
+      - "{{ home }}/.zhistory"
+      - "{{ home }}/.zshrc"
+    dest: /tmp/os_backup.tar.gz
+    exclusion_patterns:
+      - "github/*/venv*"
+      - "gitlab/*/venv*"
+    format: gz
