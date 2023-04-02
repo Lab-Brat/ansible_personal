@@ -5,6 +5,8 @@
       - "{{ home }}/cloudlinux/"
       - "{{ home }}/github/"
       - "{{ home }}/gitlab/"
+      - "{{ home }}.config/BraveSoftware"
+      - "{{ home }}.config/vivaldi"
       - "{{ home }}/.p10k.zsh"
       - "{{ home }}/.ssh/"
       - "{{ home }}/.vimrc"
