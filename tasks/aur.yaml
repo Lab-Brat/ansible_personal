@@ -30,4 +30,5 @@
         - visual-studio-code-bin
         - slack-desktop
         - telegram-desktop-bin
+        - ttf-jetbrains-mono-nerd
     become_user: "{{ user }}"
